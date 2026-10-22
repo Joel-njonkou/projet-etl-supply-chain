@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.Python
+*.pyc
+
+# Environnement virtuel
+venv/
+.venv/
+env/
+ENV/
+
+# Variables d'environnement
+.env
+.env.*
+!.env.example
+
+!data/samples/*.csv
+data/raw/
+*.csv
+
+node_modules/
+frontend_supply-chain/dist/
+.DS_Store
+.idea/
+.vscode/
+db.sqlite3
