@@ -21,7 +21,6 @@ data/raw/
 *.csv
 
 node_modules/
-frontend_supply-chain/dist/
 .DS_Store
 .idea/
 .vscode/
