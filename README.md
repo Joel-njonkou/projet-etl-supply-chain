@@ -48,8 +48,6 @@ LLM_EXPLAIN_TIMEOUT_S=120
 LLM_EXPLAIN_MAX_TOKENS=2000
 ```
 
-Vous pouvez choisir un autre modèle disponible sur OpenRouter si nécessaire. Ne partagez jamais votre fichier `.env` et ne commitez pas de clé API dans le dépôt. Le fichier `.env.example` ne contient qu’un texte de remplacement pour la clé.
-
 Les trois questions suggérées dans le chat — taux de retard global, modes ayant le plus de retards et goulots indépendamment du volume — sont calculées directement par Django. Elles ne nécessitent pas de clé LLM.
 
 Le RAG utilise l'API native Gemini `batchEmbedContents` pour `gemini-embedding-2`. Définissez `RAG_EMBEDDING_MODEL=gemini-embedding-2` et `RAG_API_KEY` avec une clé Gemini AI Studio distincte de `LLM_API_KEY`. La clé est transmise dans l'en-tête HTTP et ne doit jamais être ajoutée à Git. Après les migrations, lancez `python manage.py index_agent_knowledge` depuis `backend_supply-chain/` pour indexer le guide du projet. Les documents métier Markdown ou TXT peuvent être ajoutés dans `data/knowledge_base/` ; relancez la commande après leur ajout ou modification. `RAG_DOCUMENTS_DIR` permet de choisir un autre dossier et `RAG_TOP_K` de modifier le nombre de passages retournés.
